@@ -15,6 +15,7 @@
 
 using std::string;
 using std::ostream;
+using std::istream;
 
 // Class to represent a diet plan
 class DietPlan {
@@ -29,6 +30,11 @@ public:
 	int getCalorieGoal();
 	string getName();
 	string getDate();
+
+	// Setters < Returns true if value was changed >
+	bool setCalorieGoal(int& goal);
+	void setName(string& name);
+	void setDate(string& date);
 private:
 	// Data Members
 	int calorieGoal;
@@ -38,3 +44,6 @@ private:
 
 // Stream insertion overload
 ostream& operator<< (ostream& lhs, DietPlan& rhs);
+
+// Stream extraction overload
+istream& operator>> (istream& lhs, DietPlan& rhs);

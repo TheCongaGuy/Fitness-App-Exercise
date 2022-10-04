@@ -14,6 +14,8 @@ int main(int argc, char argv[])
 {
 	FitnessAppWrapper app;
 
-	app.displayWeeklyPlan(app.getDietPlan());
-	app.displayWeeklyPlan(app.getExercisePlan());
+	// Run the application
+	app.runApp();
+
+	return 0;
 }

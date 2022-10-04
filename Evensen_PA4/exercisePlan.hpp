@@ -15,6 +15,7 @@
 
 using std::string;
 using std::ostream;
+using std::istream;
 
 // Class to represent an exercise plan
 class ExercisePlan {
@@ -29,6 +30,12 @@ public:
 	int getStepGoal();
 	string getName();
 	string getDate();
+
+	// Setters < Returns true if value was changed >
+	bool setStepGoal(int& goal);
+	void setName(string& name);
+	void setDate(string& date);
+	
 private:
 	// Data Members
 	int stepGoal;
@@ -38,3 +45,6 @@ private:
 
 // Stream insertion overload
 ostream& operator<< (ostream& lhs, ExercisePlan& rhs);
+
+// Stream extraction overload
+istream& operator>> (istream& lhs, ExercisePlan& rhs);
