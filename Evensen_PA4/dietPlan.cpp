@@ -49,6 +49,21 @@ void DietPlan::setName(string& newName)
 void DietPlan::setDate(string& newDate)
 { date = newDate; }
 
+// Sets new values for data members inside the class
+// Takes a new goal, name, and date
+// Returns true if values changed, false otherwise
+bool DietPlan::editGoal(int& nGoal, string& nName, string& nDate)
+{
+	if (setStepGoal(nGoal))
+	{
+		setName(nName);
+		setDate(nDate);
+		return true;
+	}
+
+	return false;
+}
+
 // Stream insertion overload
 ostream& operator<< (ostream& lhs, DietPlan& rhs)
 {

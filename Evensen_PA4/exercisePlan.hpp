@@ -26,6 +26,10 @@ public:
 	// Copy Constructor
 	ExercisePlan(ExercisePlan& exPlan);
 
+	// Object Destructor
+
+	~ExercisePlan() {};
+
 	// Getters
 	int getStepGoal();
 	string getName();
@@ -35,6 +39,11 @@ public:
 	bool setStepGoal(int& goal);
 	void setName(string& name);
 	void setDate(string& date);
+
+	// Sets new values for data members inside the class
+	// Takes a new goal, name, and date
+	// Returns true if values changed, false otherwise
+	bool editGoal(int& goal, string& name, string& date);
 	
 private:
 	// Data Members

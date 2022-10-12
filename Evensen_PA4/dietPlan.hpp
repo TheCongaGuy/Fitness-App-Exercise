@@ -26,6 +26,9 @@ public:
 	// Copy Constructor
 	DietPlan(DietPlan& diPlan);
 
+	// Object Destructor
+	~DietPlan() {};
+
 	// Getters
 	int getCalorieGoal();
 	string getName();
@@ -35,6 +38,11 @@ public:
 	bool setCalorieGoal(int& goal);
 	void setName(string& name);
 	void setDate(string& date);
+
+	// Sets new values for data members inside the class
+	// Takes a new goal, name, and date
+	// Returns true if values changed, false otherwise
+	bool editGoal(int& nGoal, string& nName, string& nDate);
 private:
 	// Data Members
 	int calorieGoal;
