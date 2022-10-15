@@ -14,7 +14,3 @@ This program is made of three different classes; a `DietPlan` class, an `Exercis
   v               v                             /   \
 DietPlan()   ExercisePlan()         DietPlans.txt    ExercisePlans.txt
 ```
-
-## DataPlan Classes
-
-For the `DietPlan()` and `ExercisePlan()` classes inheritance could have been used but for the purposes of this exercise, inheritance was off the table. Each of these classes holds very similar data and member methods. They hold a `std::string name`, `std::string date`, and `int goal` as their data members, and each have respective constructors, copy constructors, destructors, getters, setters, and overloaded operators.
